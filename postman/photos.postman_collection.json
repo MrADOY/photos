@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "f693f6b6-aec5-41c7-b193-60c87219e9ff",
+		"name": "photos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload fichier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fichier",
+							"type": "file",
+							"src": "P1000387.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/upload-fichier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upload-fichier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/download-file/P1000387.JPG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"download-file",
+						"P1000387.JPG"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
